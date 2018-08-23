@@ -5,20 +5,28 @@ body{
     justify-content: space-between;
     align-items: center;
     margin: 0;
-   
 }
 .container{
-    height: 250px;
-    width: 250px;
-    float: left;
+    height: 150px;
+    width: 150px;
+    /*
+    float: left
+    nie był potrzebny, skoro uzywasz flexboxa (display: flex) nie uzywasz floata, taka zasada.
+    */
     background-color: palevioletred;
     
 }
-@media (max-width:360px){
-    body{ display: flex;
-        flex-direction: row;
+@media (max-width:450px){
+    body{ 
+        flex-direction: column;
+        /*
+        zmieniłem flexdirection na COLUMN poniewaz ROW jest standardowo (row z ang. to wiersz, a column to kolumna,
+        dokładnie tak jak w jakiś tabelach. Celem media-queries było dodanie pewych stylów w momencie wykonania się
+        instrukcji "max-width:450px". Super ze to zrobiłaś i zrozumiałaś.
+        Lecz poczytaj jeszcze o flexboxie a dokładniej o direction.
+        */
         flex-wrap: wrap;
-        
+
     }
     
 }
